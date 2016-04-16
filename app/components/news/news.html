@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <a href="javascript:;">new</a>
+  <a href="javascript:;">job</a>
+  <a href="javascript:;">comments</a>
+  <a href="javascript:;">ask</a>
+</div>
+
+<ul>
+  <li *ngFor="#item of news" data-id="{{item.id}}">
+    <div class="info"><a href="{{item.url}}" class="title">{{item.title}} </a>
+      <a href="{{item.url | getHostName}}" class="host">({{item.url | getHostName}})</a>
+    </div>
+    <div class="extra">
+      S:{{item.score}}|C:{{item.descendants}}
+    </div>
+  </li>
+</ul>

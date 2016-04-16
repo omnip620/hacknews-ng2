@@ -1,0 +1,59 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: right;
+
+}
+
+.sidebar a {
+  color: rgba(0, 0, 0, 0.73);
+}
+
+ul {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+li {
+  flex-direction: column;
+  width: 100%;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.870588);
+  border-radius: 1px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  margin: 1.45em 0;
+}
+
+li .info {
+
+}
+
+li .extra {
+  color: rgba(108, 108, 108, 0.87);
+  font-size: small;
+}
+
+li .title {
+  color: rgba(0, 0, 0, 0.73);
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+li .host {
+  margin: .2em;
+  font-size: .3em;
+  color: rgba(0, 0, 0, 0.870588);
+  text-decoration: none;
+}
+
+li .host:hover {
+  text-decoration: underline;
+}
