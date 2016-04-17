@@ -1,6 +1,3 @@
-/**
- * Created by panzhichao on 16/4/13.
- */
 System.register(['angular2/platform/browser', 'rxjs/Rx', './components/app/app'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
@@ -19,4 +16,3 @@ System.register(['angular2/platform/browser', 'rxjs/Rx', './components/app/app']
         }
     }
 });
-//# sourceMappingURL=main.js.map

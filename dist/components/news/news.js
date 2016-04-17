@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../../services/news', '../theme/theme'], function(exports_1, context_1) {
+System.register(['angular2/core', '../../services/news'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', '../../services/news', '../theme/theme'], func
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, news_1, core_2, theme_1;
+    var core_1, news_1, core_2;
     var getHostName, NewsComponent;
     return {
         setters:[
@@ -20,9 +20,6 @@ System.register(['angular2/core', '../../services/news', '../theme/theme'], func
             },
             function (news_1_1) {
                 news_1 = news_1_1;
-            },
-            function (theme_1_1) {
-                theme_1 = theme_1_1;
             }],
         execute: function() {
             getHostName = (function () {
@@ -47,35 +44,23 @@ System.register(['angular2/core', '../../services/news', '../theme/theme'], func
             NewsComponent = (function () {
                 function NewsComponent(_newsService) {
                     this._newsService = _newsService;
-                    this.news = [];
-                    this.loading = true;
-                    this.page = 0;
                 }
                 NewsComponent.prototype.ngOnInit = function () {
-                    // this.news = this._newsService.getNews();
-                    this.fetchNews(0);
-                };
-                NewsComponent.prototype.onScroll = function () {
-                    if ((window.innerHeight + window.scrollY) > document.body.offsetHeight && !this.loading) {
-                        this.fetchNews(++this.page);
-                    }
-                };
-                NewsComponent.prototype.fetchNews = function (page) {
-                    var _this = this;
-                    this.loading = true;
-                    this._newsService.getNewsRemote(page).then(function (news) {
-                        _this.loading = false;
-                        (_a = _this.news).push.apply(_a, news);
-                        var _a;
-                    }, function (error) { return _this.errorMessage = error; });
+                    console.log(1111);
+                    this.news = this._newsService.getNews();
+                    // this._newsService.getNewsRemote().then(
+                    //   news=> {
+                    //
+                    //     return this.news = news;
+                    //   },
+                    //   error=>this.errorMessage = <any>error);
                 };
                 NewsComponent = __decorate([
                     core_1.Component({
                         selector: 'news',
                         templateUrl: "app/components/news/news.html",
-                        directives: [theme_1.Theme],
                         providers: [news_1.NewsService],
-                        pipes: [getHostName],
+                        pipes: [[getHostName]],
                         styleUrls: ['app/components/news/news.css']
                     }), 
                     __metadata('design:paramtypes', [news_1.NewsService])
@@ -86,4 +71,3 @@ System.register(['angular2/core', '../../services/news', '../theme/theme'], func
         }
     }
 });
-//# sourceMappingURL=news.js.map

@@ -1,31 +1,88 @@
 /* Master Styles */
+@font-face {
+  font-family: 'Omni';
+  src: url('fonts/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/raleway-medium-webfont.woff2') format('woff2'),
+  url('fonts/raleway-medium-webfont.woff') format('woff'),
+  url('fonts/raleway-medium-webfont.ttf') format('truetype'),
+  url('fonts/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Omni', Helvetica, Tahoma, Arial, 'Microsoft YaHei', 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
+  margin: 0;
+}
+
+/*@media (min-width: 414px) {*/
+/*body {*/
+/*font-family: 'Every Where', Helvetica, Tahoma, Arial, 'Microsoft YaHei', 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif;*/
+/*background-color: #f8f8f8;*/
+/*margin: 0;*/
+/*}*/
+/*}*/
+
 h1 {
   color: #369;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 
 h2, h3 {
   color: #444;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
 
-body {
-  margin: 2em;
-}
-
-body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
-}
-
 ul {
-  list-style: none
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-*{
-  box-sizing: border-box;
+
+body.green .sidebar, body.green news li, body.green .loader-inner > div {
+  background-color: #4CAF50 !important;
 }
+
+body.green .sidebar a.active {
+  color: #4CAF50 !important;
+}
+
+body.blue .sidebar, body.blue news li, body.blue .loader-inner > div {
+  background-color: #2196F3 !important;
+}
+
+body.blue .sidebar a.active {
+  color: #2196F3 !important;
+}
+
+body.red .sidebar, body.red news li, body.red .loader-inner > div {
+  background-color: #f44336 !important;
+}
+
+body.red .sidebar a.active {
+  color: #f44336 !important;
+}
+
+body.yellow .sidebar, body.yellow news li, body.yellow .loader-inner > div {
+  background-color: #ff9800 !important;
+}
+
+body.yellow .sidebar a.active {
+  color: #ff9800 !important;
+}
+
+body.teal .sidebar, body.teal news li, body.teal .loader-inner > div {
+  background-color: #009688 !important;
+}
+
+body.teal .sidebar a.active {
+  color: #009688 !important;
+}
+
 /*
  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
  * for the full set of master styles used by the documentation samples

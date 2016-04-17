@@ -5,7 +5,13 @@
   <meta charset="UTF-8">
   <title>HackerNews-NG2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//cdn.bootcss.com/loaders.css/0.1.2/loaders.min.css" rel="stylesheet">
+  <style>
+
+  </style>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts.css">
 
   <!-- 1. Load libraries -->
   <!-- IE required polyfills, in this exact order -->
@@ -24,18 +30,18 @@
     System.config({
       packages: {
         app: {
-          format          : 'register',
+          format: 'register',
           defaultExtension: 'js'
         }
       }
     });
     System.import('app/main')
-      .then(null, console.error.bind(console));
+            .then(null, console.error.bind(console));
   </script>
 </head>
 
 <!-- 3. Display the application -->
-<body>
+<body class="red">
 <app>Loading...</app>
 </body>
 </html>

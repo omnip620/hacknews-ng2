@@ -482,7 +482,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
                     console.log(error);
                     return Observable_1.Observable.throw(error.json().error || 'Server error');
                 };
-                NewsService.prototype.getNewsRemote = function (i) {
+                NewsService.prototype.getNewsRemote = function () {
                     var _this = this;
                     if (!this.newsIDs.length) {
                         return this.http.get(this._newsIdsUrl).toPromise()
@@ -490,7 +490,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
                             .then(function (data) { return _this.getNewsHandle(data.slice(0, 20)); })
                             .catch(this.handleError);
                     }
-                    return this.getNewsHandle(this.newsIDs.slice(i * 10, i * 10 + 20));
+                    return this.getNewsHandle(this.newsIDs.slice(0, 20));
                 };
                 NewsService.prototype.getNewsHandle = function (ids) {
                     var self = this;
@@ -511,4 +511,3 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
         }
     }
 });
-//# sourceMappingURL=news.js.map

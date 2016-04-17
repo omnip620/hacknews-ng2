@@ -1,17 +1,33 @@
 <div class="sidebar">
-  <a href="javascript:;">new</a>
-  <a href="javascript:;">job</a>
-  <a href="javascript:;">comments</a>
-  <a href="javascript:;">ask</a>
+  <theme-switcher></theme-switcher>
+
+
+  <a href="javascript:;" class="active"><span>new</span></a>
+  <a href="javascript:;"><span>job</span></a>
+  <a href="javascript:;"><span>comments</span></a>
+  <a href="javascript:;"><span>ask</span></a>
 </div>
 
-<ul>
-  <li *ngFor="#item of news" data-id="{{item.id}}">
-    <div class="info"><a href="{{item.url}}" class="title">{{item.title}} </a>
-      <a href="{{item.url | getHostName}}" class="host">({{item.url | getHostName}})</a>
+<div class="main" (window:scroll)="onScroll($event)">
+  <ul>
+    <li *ngFor="#item of news" data-id="{{item.id}}">
+      <div class="info"><a href="{{item.url}}" class="title">{{item.title}} </a>
+        <a href="{{item.url | getHostName}}" class="host">({{item.url | getHostName}})</a>
+      </div>
+      <div class="extra">
+        <span><i class="icon-heart"></i>{{item.score}}</span>
+        <span><i class="icon-bubble"></i>{{item.descendants}}</span>
+        <span><i class="icon-calendar"></i>{{item.time*1000 | date:'YY-MM-dd HH:mm'}}</span>
+        <span><i class="icon-user"></i>{{item.by}}</span>
+      </div>
+    </li>
+  </ul>
+  <div class="loader-inner-wrap">
+    <div class="loader-inner ball-scale-multiple" *ngIf="loading">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <div class="extra">
-      S:{{item.score}}|C:{{item.descendants}}
-    </div>
-  </li>
-</ul>
+  </div>
+</div>

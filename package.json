@@ -4,21 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp & tsc -w"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.14",
+    "angular2": "2.0.0-beta.15",
+    "systemjs": "0.19.26",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.26",
-    "typescript": "^1.8.10",
     "zone.js": "0.6.10"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
-    "typescript": "^1.8.9",
-    "typings": "^0.7.11"
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-typescript": "^2.13.0",
+    "gulp-watch": "^4.3.5",
+    "typescript": "^1.8.10",
+    "typings": "^0.7.12"
   },
   "author": "",
   "license": "ISC"
