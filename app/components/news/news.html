@@ -12,7 +12,7 @@
   <ul>
     <li *ngFor="#item of news" data-id="{{item.id}}">
       <div class="info"><a href="{{item.url}}" class="title">{{item.title}} </a>
-        <a href="{{item.url | getHostName}}" class="host">({{item.url | getHostName}})</a>
+        <a href="//{{item.url | getHostName}}" class="host">({{item.url | getHostName}})</a>
       </div>
       <div class="extra">
         <span><i class="icon-heart"></i>{{item.score}}</span>

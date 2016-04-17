@@ -511,4 +511,3 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
         }
     }
 });
-//# sourceMappingURL=news.js.map

@@ -86,4 +86,3 @@ System.register(['angular2/core', '../../services/news', '../theme/theme'], func
         }
     }
 });
-//# sourceMappingURL=news.js.map

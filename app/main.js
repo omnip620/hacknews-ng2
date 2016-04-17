@@ -19,4 +19,3 @@ System.register(['angular2/platform/browser', 'rxjs/Rx', './components/app/app']
         }
     }
 });
-//# sourceMappingURL=main.js.map
