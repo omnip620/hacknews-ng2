@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <theme-switcher></theme-switcher>
+
+
+  <a href="javascript:;" class="active"><span>new</span></a>
+  <a href="javascript:;"><span>job</span></a>
+  <a href="javascript:;"><span>comments</span></a>
+  <a href="javascript:;"><span>ask</span></a>
+</div>
+
+<div class="main" (window:scroll)="onScroll($event)">
+  <ul>
+    <li *ngFor="let item of news" data-id="{{item.id}}">
+      <div class="info"><a href="{{item.url}}" class="title">{{item.title}} </a>
+        <a href="//{{item.url | getHostName}}" class="host">({{item.url | getHostName}})</a>
+      </div>
+      <div class="extra">
+        <span><i class="icon-heart"></i>{{item.score}}</span>
+        <span><i class="icon-bubble"></i>{{item.descendants}}</span>
+        <span><i class="icon-calendar"></i>{{item.time*1000 | date:'YY-MM-dd HH:mm'}}</span>
+        <span><i class="icon-user"></i>{{item.by}}</span>
+      </div>
+    </li>
+  </ul>
+  <div class="loader-inner-wrap">
+    <div *ngIf="loading">
+      lodaing...
+    </div>
+  </div>
+</div>
