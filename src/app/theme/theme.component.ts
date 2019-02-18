@@ -21,6 +21,7 @@ import { Component } from '@angular/core';
     height: 8px;
     display: inline-block;
     border-radius: 50%;
+    margin-right: 4px;
     box-shadow: 2px 2px 2px rgba(0,0,0,.1);
   }
   .blue{
