@@ -442,6 +442,14 @@ export class NewsService {
   }
 
   getNewsRemote(page: number) {
+
+
+   this.http.get<number[]>(this._newsIdsUrl)
+    .pipe(
+      tap(_ => console.log('fetched heroes')),
+      tap(data=> data = data.slice(0, 20)),
+    ).subscribe(val => console.log(val));
+
     if (!this.newsIDs.length) {
       return this.http
         .get(this._newsIdsUrl)
